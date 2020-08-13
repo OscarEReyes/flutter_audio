@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:medcorder_audio/medcorder_audio.dart';
+import 'package:medcorder_audio/audio_recorder.dart';
 
 void main() {
   runApp(new MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  MedcorderAudio audioModule = new MedcorderAudio();
+  AudioRecorder audioModule = new AudioRecorder();
   bool canRecord = false;
   double recordPower = 0.0;
   double recordPosition = 0.0;
