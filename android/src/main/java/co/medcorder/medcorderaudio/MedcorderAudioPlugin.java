@@ -123,6 +123,7 @@ public class MedcorderAudioPlugin implements MethodCallHandler, EventChannel.Str
     recorder = new MediaRecorder();
     try {
       currentOutputFile = activity.getApplicationContext().getFilesDir() + "/" + fileName + ".aac";
+      System.out.println(currentOutputFile);
       recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
       int outputFormat = MediaRecorder.OutputFormat.AAC_ADTS;
       recorder.setOutputFormat(outputFormat);
