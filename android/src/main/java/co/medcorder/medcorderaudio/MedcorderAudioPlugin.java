@@ -122,7 +122,10 @@ public class MedcorderAudioPlugin implements MethodCallHandler, EventChannel.Str
     Log.d(TAG, "startRecord:" + fileName);
     recorder = new MediaRecorder();
     try {
-      currentOutputFile = activity.getApplicationContext().getFilesDir() + "/" + fileName + ".aac";
+      currentOutputFile = activity.getApplicationContext().getFilesDir() + "";
+      currentOutputFile = currentOutputFile.replaceFirst("app_flutter", "files");
+      currentOutputFile = currentOutputFile + "/" + fileName + ".aac";
+
       Log.d(TAG, "Current Output File:" + currentOutputFile);
       System.out.println(currentOutputFile);
       recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
