@@ -136,6 +136,7 @@ public class MedcorderAudioPlugin implements MethodCallHandler, EventChannel.Str
       recorder.setOutputFile(currentOutputFile);
     }
     catch(final Exception e) {
+      Log.d(TAG, "Fucking failed: " + e);
       return false;
     }
 
